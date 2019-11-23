@@ -19,36 +19,50 @@
             New York Times Search
         </div>
 
-        <form>
-            <div class="form-group">
-                <label for="searchTerm">Search Term:</label>
-                <input id="searchTerm" class="form-control" type="text">
-            </div>
+        <div class="card ">
+            <div class="card-header text-white bg-dark ">Search Parameters</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="searchTerm">Search Term:</label>
+                        <input id="searchTerm" class="form-control" type="text">
+                    </div>
 
-            <div class="form-group">
-                <label for="numberOfRecords">Number of Records to Retrieve:</label>
-                <input id="numberOfRecords" class="form-control" type="number">
-            </div>
+                    <div class="form-group">
+                        <label for="numberOfRecords">Number of Records to Retrieve:</label>
+                        <input id="numberOfRecords" class="form-control" type="number">
+                    </div>
 
-            <div class="form-group">
-                <label for="startYear">Start Year (Optional):</label>
-                <input id="startYear" class="form-control" type="number">
-            </div>
+                    <div class="form-group">
+                        <label for="startYear">Start Year (Optional):</label>
+                        <input id="startYear" class="form-control" type="number">
+                    </div>
 
-            <div class="form-group">
-                <label for="endYear">End Year (Optional):</label>
-                <input id="endYear" class="form-control" type="number">
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="form-group">
-                <button value="submit" id="btnClear" type="button" class="btn btn-danger">Clear</button>
-                <button value="clear" id="btnSearch" type="button" class="btn btn-success">Search</button>
-            </div>
-        </form>
+                    <div class="form-group">
+                        <label for="endYear">End Year (Optional):</label>
+                        <input id="endYear" class="form-control" type="number">
+                    </div>
+                    <br>
 
-    </div>
+                    <div class="form-group">
+                        <button value="submit" id="btnClear" type="button" class="btn btn-danger">Clear</button>
+                        <button value="clear" id="btnSearch" type="button" class="btn btn-success">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-header text-white bg-dark ">Results</div>
+            <div class="card-body">
+
+
+                <div id="results" class="form-group">
+
+                </div>
+            </div>
+        </div>
+        <br><br>
 </body>
 
 </html>
