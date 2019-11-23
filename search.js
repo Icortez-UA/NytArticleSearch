@@ -1,26 +1,26 @@
 
-
+$(document).ready(function(){
 
 var divTitle = $('');
 
 
 
-$('button').on("click", function(event){
+$('form').submit(function(event){
     event.preventDefault();
     
     
-    var articleInput = ;
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey";
+    var articleInput = $('#searchTerm').val();
+    console.log(articleInput)
+    var numOf = $('#numberOfRecords').val();
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+articleInput+"&api-key=XkuwlndL7Pp81qHZ9vEer4a6fLAPiN9J";
     
     
     $.ajax({
         url: queryURL,
         method: "GET"
       }).then(function(response) {
+          console.log(response)
       });
 
-      createRow(){
-          $('<h1>').append('')
-      }
 })
-
+});
