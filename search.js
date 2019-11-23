@@ -12,7 +12,9 @@ $('form').submit(function(event){
     var articleInput = $('#searchTerm').val();
     console.log(articleInput);
     var numOf = $('#numberOfRecords').val();
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+articleInput+"&api-key=XkuwlndL7Pp81qHZ9vEer4a6fLAPiN9J";
+    var startDateInput = $('#startYear').val();
+    var endDateInput = $('#endYear').val();
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+articleInput+"&begin_date="+startDateInput+"0101&end_date="+endDateInput+"0101&api-key=XkuwlndL7Pp81qHZ9vEer4a6fLAPiN9J";
     console.log(queryURL);
     
      $.ajax({
