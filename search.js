@@ -20,14 +20,14 @@ $('form').submit(function(event){
      method: "GET"
       }).then(function(data) {
        console.log(data);
-       data.response.docs.forEach(element => {
+       for(i=0; i< numOf; i++) {
            var artTitle = element.headline.main;
 
            $(divTitle).append('<h1>'+artTitle+'</h1>');
            $(divTitle).append('<p>'+data.response.docs[0].abstract+'</p>');
            
            
-    });
+    }
 });
 //$(divTitle).append('<h1>'+artTitle+'</h1>');
 //$(divTitle).append('<p>'+data.response.docs[0].abstract+'</p>');
