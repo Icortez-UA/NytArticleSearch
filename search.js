@@ -21,10 +21,10 @@ $('form').submit(function(event){
       }).then(function(data) {
        console.log(data);
        for(i=0; i< numOf; i++) {
-           var artTitle = element.headline.main;
+           var artTitle = data.response.docs[i].headline.main;
 
            $(divTitle).append('<h1>'+artTitle+'</h1>');
-           $(divTitle).append('<p>'+data.response.docs[0].abstract+'</p>');
+           $(divTitle).append('<p>'+data.response.docs[i].abstract+'</p>');
            
            
     }
